@@ -24,15 +24,12 @@
         method: 'GET'
       }).done(function(res) {
         let url = res.sprites.front_default;
-        // console.log(res);
 
         $.ajax({
           url: res.species.url,
           method: 'GET'
         }).done(function(res2) {
-          // console.log("res2:", res2);
           let japaneseName = res2.names.find(name => name.language.name === 'ja-Hrkt');
-          // console.log("japaneseName:", japaneseName);
 
           // 「ポケモンを探す」後の画面表示
           let encountHtml =
@@ -50,7 +47,7 @@
             $('#wrapper').html(encountHtml);
 
           }).fail(function(err) {
-            
+
         });
       });
     });
