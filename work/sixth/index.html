@@ -47,7 +47,7 @@
             $('#wrapper').html(encountHtml);
 
           }).fail(function(err) {
-
+            alert('失敗しました');
         });
       });
     });
@@ -86,9 +86,9 @@
           $('#wrapper').html(failHtml);
         }
       }).fail(function(err){
-
-        });
+        alert('失敗しました');
       });
+    });
 
     $(document).on("click", "[data-js=reset]", function(){
       let startHtml = '<button type="button" class="btn search-btn" id="pokemon_search">ポケモンを探す</button>';
